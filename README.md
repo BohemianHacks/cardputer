@@ -9,18 +9,22 @@ git clone https://github.com/m5stack/M5Cardputer.git
 ```
 
 # File: CMakeLists.txt
+```
 cmake_minimum_required(VERSION 3.16)
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 project(m5_audio_test)
-
+```
 # File: main/CMakeLists.txt
+```
 idf_component_register(
     SRCS "main.cpp"
     INCLUDE_DIRS "."
     REQUIRES "M5Cardputer" "esp-dsp" "driver"
 )
+```
 
 # File: main/main.cpp
+```
 #include <M5Cardputer.h>
 #include "esp_dsp.h"
 #include "driver/i2s.h"
@@ -115,7 +119,7 @@ void loop() {
 
     delay(100);  // Small delay to keep display readable
 }
-
+```
 # Build Instructions:
 1. Create project directory:
    ```bash
